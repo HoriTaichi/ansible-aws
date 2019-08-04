@@ -1,0 +1,11 @@
+---
+# tasks file for nginx
+   - name: nginxインストール
+     yum:
+       name: nginx
+       enablerepo: epel
+   - name: nginx起動設定
+     service:
+       name: nginx
+       state: started
+       enabled: true

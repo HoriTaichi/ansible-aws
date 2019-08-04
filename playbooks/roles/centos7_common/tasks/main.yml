@@ -2,3 +2,15 @@
   yum:
     name: epel-release
 
+- name: ユーティリティインストール
+  yum:
+    name: ['bind-utils', 'expect', 'git', 'lzop', 'mlocate', 'net-tools', 'rsync', 'unzip', 'zip']
+
+    #- name: SELinux停止
+    #  selinux:
+    #    state: disabled
+
+- name: タイムゾーン設定
+  timezone:
+    name: Asia/Tokyo
+

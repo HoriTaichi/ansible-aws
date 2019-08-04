@@ -5,4 +5,5 @@
     - vars/{{ stage }}.yml
   roles:
     - centos7_common
+    - nginx
 
