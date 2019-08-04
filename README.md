@@ -28,10 +28,17 @@ ansible practice_server -i inventory/practice -m setup
 ssh -F ssh_config aws
 sudo amazon-linux-extras install -y epel
 ```
+## Amazon Console画面からセキュリティーグループの設定を行う
 
+[インバウンド] -> [編集] -> タイプHTTPの設定を行う
 
 ## ansible-playbookで実行
+差分確認
+```
+ansible-playbook -i inventory/practice playbooks/practice.yml --diff
+```
 
+実行
 ```
 ansible-playbook -i inventory/practice playbooks/practice.yml
 ```
