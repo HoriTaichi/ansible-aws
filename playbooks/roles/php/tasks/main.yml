@@ -1,0 +1,17 @@
+---
+# tasks file for php
+- name: Remiリポジトリ追加
+  yum:
+    name: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+    #- name: PHP 7.2インストール
+    #  yum:
+    #    name: ['php', 'php-fpm', 'php-mbstring', 'php-pdo', 'php-gd', 'php-xml', 'php-mysqlnd',
+    #           'php-pecl-imagick', 'php-pecl-zip', 'php-process', 'php-bcmath', 'php-gmp', 'composer']
+    #    enablerepo: epel,remi-php72
+    #  notify: php-fpm再起動
+
+- name: yum php install
+  yum:
+    enablerepo: epel,remi-php72
+    name: ['php', 'php-fpm', 'php-mbstring', 'php-pdo', 'php-gd', 'php-xml', 'php-mysqlnd','php-pecl-imagick', 'php-pecl-zip', 'php-process', 'php-bcmath', 'php-gmp', 'composer']
