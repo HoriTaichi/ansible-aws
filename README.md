@@ -28,6 +28,16 @@ ansible practice_server -i inventory/practice -m setup
 ssh -F ssh_config aws
 sudo amazon-linux-extras install -y epel
 ```
+
+## EC2に入って、amzn-mainリポジトリの優先度を下げる
+```
+sudo vim /etc/yum.repos.d/amzn2-core.repo
+-priority=10
++priority=99
+```
+参考URL:https://blog.adachin.me/archives/9596
+
+
 ## Amazon Console画面からセキュリティーグループの設定を行う
 
 [インバウンド] -> [編集] -> タイプHTTPの設定を行う
