@@ -1,0 +1,8 @@
+- hosts: practice_server
+  become: yes
+  remote_user: ec2-user
+  vars_files:
+    - vars/{{ stage }}.yml
+  roles:
+    - centos7_common
+

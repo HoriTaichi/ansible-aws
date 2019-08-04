@@ -1,0 +1,5 @@
+[practice_server]
+3.112.207.165
+
+[all:vars]
+stage=practice

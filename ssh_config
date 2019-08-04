@@ -1,0 +1,6 @@
+Host aws
+  User ec2-user
+  HostName ec2-3-112-207-165.ap-northeast-1.compute.amazonaws.com
+  IdentityFile ~/.ssh/horiLocalKeyPair.pem
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
